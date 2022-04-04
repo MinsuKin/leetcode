@@ -1,4 +1,7 @@
 # Definition for singly-linked list.
+import collections
+
+
 class ListNode:
     def __init__(self, val=0, next=None):
         self.val = val
@@ -15,43 +18,31 @@ class Solution:
                 return False
         return True
 
+# https://www.youtube.com/watch?v=fDOBOBYVV0A
+# class Solution:
+#     def isPalindrome(self, head: Optional[ListNode]) -> bool:
+#         q = collections.deque()
 
-# def check_big_o_n(self, head):
-#         # time complexity = O(n), Space Complexity = O(1)
-#         # First, we get the middle element accordingly
-#         mid,even = self.getMid(head)
-#         second = mid.next
-#         # if, its even then ignoring the middle value
-#         if not even: second = second.next
-#         # Reversing the first half of the list
-#         first = self.reverse(head, mid)
-#         while first and second:
-#             if first.val != second.val: return False
-#             first = first.next
-#             second = second.next
+#         if not head:
+#             return True
+        
+#         node = head
+#         while node is not None:
+#             q.append(node.val)
+#             node = node.next
+
+#         while len(q) > 1:
+#             if q.popleft() != q.pop():
+#                 return False
+        
 #         return True
-        
-        
-#     def reverse(self, head, upto):
-#         prev = next = None
-#         # print("In rev", head.val)
-#         curr = head
-#         while curr and prev != upto:
-#             # print("in rev", curr.val)
-#             next = curr.next
-#             curr.next = prev
-#             prev = curr
-#             curr = next
-#         return prev
-        
-#     def getMid(self, head):
-#         slow = head
-#         fast = head.next
-#         prev = head
-#         while fast and fast.next:
-#             prev = slow
-#             slow = slow.next
-#             fast = fast.next.next
-#         # print(slow, fast, prev)
-#         if not fast: return prev,False
-#         return slow,True
+
+
+
+# def isPalindrome(self, head: ListNode) -> bool:
+#     vals = []
+#     current_node = head
+#     while current_node is not None:
+#         vals.append(current_node.val)
+#         current_node = current_node.next
+#     return vals == vals[::-1]
