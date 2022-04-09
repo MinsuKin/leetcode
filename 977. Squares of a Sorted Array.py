@@ -3,3 +3,4 @@ class Solution:
         for i in range(0, len(nums)):
             nums[i] = nums[i] * nums[i]
         return sorted(nums)
+        
