@@ -1,3 +1,5 @@
+#https://www.daleseo.com/sort-quick/
+
 def quick_sort(arr):
     def sort(low, high):
         if high <= low:
