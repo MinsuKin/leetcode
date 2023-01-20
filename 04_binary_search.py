@@ -16,5 +16,4 @@ class Solution:
                 mid = pl + ((pr - pl) // 2)
             elif nums[mid] == target:
                 return mid
-            print(nums)
         return -1
