@@ -1,8 +1,8 @@
 public class MovingAverage {
 
-    int maxSize;
-    int totalSum;
-    List<int> numbers;
+    private int maxSize;
+    private double totalSum;
+    private List<int> numbers;
 
     public MovingAverage(int size) {
         maxSize = size;
@@ -21,6 +21,6 @@ public class MovingAverage {
         numbers.Add(val);
 
         // double로 캐스팅 해야함
-        return (double)totalSum / numbers.Count;
+        return totalSum / numbers.Count;
     }
 }
